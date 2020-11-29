@@ -10,7 +10,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ModalHeader from 'react-bootstrap/ModalHeader';
 import firebase from "./firebase";
-
+import ModalDialog from 'react-bootstrap/ModalDialog';
 
 
 
@@ -41,26 +41,31 @@ const useStyles = makeStyles({
         padding: '7px',
         border: '0px',
         background: '#002f34',
-        maxWidth: '50px',
+        maxWidth: '47px',
         color: "#ffffff",
         cursor: "pointer",
-        fontSize: "45px",
+        fontSize: "46px",
         fontWeight: "bolder"
 
     },
     go1: {
-        fontSize: "45px",
+        fontSize: "47px",
         padding: '7px',
     }
 });
-function SignIn() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
-  }
-let SignOut = () => {
-    firebase.auth().signOut();
-  }
+// const signIn = () => {
+//     var provider = new firebase.auth.GoogleAuthProvider();
+//     firebase.auth().signInWithPopup(provider);
+// }
+// function signOut() {
+//     firebase.auth().signOut();
+// }
+
+
 function Header() {
+
+    
+
 
     const nav = [
         { ID: 1, label: "Mobile Phones" },
@@ -79,36 +84,19 @@ function Header() {
 
 
     return (
-        <React.Fragment>
+        <>
             
             <div LOG IN>
-                {/* <Button variant="primary" onClick={handleShow}>
-              Launch demo modal
-            </Button> */}
+                
 
                 <Modal show={show} onHide={handleClose}>
-                    {/* <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
-                </Button>
-                <Button variant="primary" className="but0" onClick={handleClose}>
-                  Save Changes
-                </Button>
-              </Modal.Footer> */}
+                    
               
                     <div>
                         <div className="log log1">
                             <div className="log2">
-                            <Modal.Header className="logspn leftPath" closeButton/>
-                                {/* <span className="logspn" data-aut-id="btnClose">
-                                    <svg width="25px" height="25px" viewBox="0 0 1024 1024" data-aut-id="icon" className fillRule="evenodd">
-                                        < path className="leftPath" d="M878.336 85.333l-366.336 366.315-366.336-366.315h-60.331v60.331l366.336 366.336-366.336 366.336v60.331h60.331l366.336-366.336 366.336 366.336h60.331v-60.331l-366.315-366.336 366.315-366.336v-60.331z"  closeButton/>
-                                    </svg>
-                                </span> */}
+                            <Modal.Header className="logspn " closeButton/>
+                                
                                     
                                 <div data-aut-id="loginModal">
                                     <div className="logMod">
@@ -200,7 +188,7 @@ function Header() {
                                             </button>
                                         </div>
                                     </div>
-                                    <button type="button" data-aut-id className="face faceA faceB faceC faceD" >
+                                    <button type="button"className="face faceA faceB faceC faceD" >
                                         <div className="facePath">
                                             <svg width="22px" height="22px" viewBox="0 0 1024 1024" data-aut-id="icon" className fillRule="evenodd">
                                                 <path className="facePath1 facePath2" d="M511.979 85.321c235.648 0 426.667 191.019 426.667 426.667s-191.019 426.667-426.667 426.667c-235.605 0-426.667-191.019-426.667-426.667s191.061-426.667 426.667-426.667zM511.979 150.601c-199.595 0-361.429 161.792-361.429 361.387 0 199.637 161.835 361.429 361.429 361.429 199.637 0 361.429-161.792 361.429-361.429 0-199.595-161.792-361.387-361.429-361.387zM515.772 325.594c47.061-2.176 91.221 17.92 127.189 45.995-15.403 17.109-31.275 33.621-48.341 49.024-43.221-29.312-104.747-37.717-147.968-3.797-61.867 41.899-64.768 140.971-5.205 186.155 57.856 51.541 167.296 25.941 183.381-52.864-36.309-0.555-72.661 0-108.885-1.152-0.171-21.291-0.213-42.453-0.171-63.659 60.587-0.213 121.259-0.299 181.973 0.171 3.627 49.92-3.157 102.955-34.347 144.256-47.317 65.28-142.379 84.352-216.576 56.32-74.411-27.691-127.232-104.789-120.917-183.424 1.664-96.128 91.861-180.309 189.867-177.024z" />
@@ -255,13 +243,13 @@ function Header() {
                 {
                     nav.map(item => {
                         return (
-                            <Link to={"/browser/" + item.ID} className="neon noulh  color font s15" y >{item.label}</Link>
+                            <Link to={"/browser/" + item.ID} className="neon noul1  color font s15" y >{item.label}</Link>
                         )
                     })
                 }
             </div>
             <div className="hclr" />
-        </React.Fragment>
+        </>
     )
 }
 

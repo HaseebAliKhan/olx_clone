@@ -4,17 +4,15 @@ import "firebase/auth"
 
 
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBaZ47QeIeOlh8lncWfdn7gZee6lkQPBQg",
-  authDomain: "olx-clone-b7551.firebaseapp.com",
-  databaseURL: "https://olx-clone-b7551.firebaseio.com",
-  projectId: "olx-clone-b7551",
-  storageBucket: "olx-clone-b7551.appspot.com",
-  messagingSenderId: "456370941849",
-  appId: "1:456370941849:web:c66b0f7d3d78cd12c66d08"
+  apiKey: "AIzaSyDssYyng6sXXi9_Wb393qGolAuHO1JGCb0",
+  authDomain: "olx-clone-c5576.firebaseapp.com",
+  databaseURL: "https://olx-clone-c5576.firebaseio.com",
+  projectId: "olx-clone-c5576",
+  storageBucket: "olx-clone-c5576.appspot.com",
+  messagingSenderId: "106286296739",
+  appId: "1:106286296739:web:0efd0af638bbd420e09916",
+  measurementId: "G-8KWJBGWCJ1"
 };
 
 export default firebase.initializeApp(firebaseConfig);
-
-

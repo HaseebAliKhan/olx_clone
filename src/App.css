@@ -5,9 +5,19 @@
     right: 0px;
     height: 70px;
     z-index: 9;
-    background: #f1f1f1;   
+    background: #fff;   
     box-shadow: 0px 2px 2px #dadada;
     padding: 0px 16%;
+}
+.header::after{
+    content: "";
+    background-color: rgba(0,47,52,.03);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
 }
 .header .logo{
     width: 45px;
@@ -1190,6 +1200,7 @@ div {
 
 .logspn {
     right: 12px !important;
+    border: none !important;
 }
 .log2 .logspn{
     z-index: 1 !important;
@@ -1215,6 +1226,20 @@ div {
 }
 .close{
     font-size: 30px !important;
+    border: none;
+    background-color: #fff;
+}
+.close span{
+    font-size: 53px !important;
+    position: absolute;
+    top: -18px;
+    right: -3px;
+    font-style: italic;
+    font-family: auto;
+    color: gray;
+}
+.sr-only{
+    display: none;
 }
 .logsvg path[Attributes=Style] {
     path :d("M 878.336 85.333 l -366.336 366.315 l -366.336 -366.315 h -60.331 v 60.331 l 366.336 366.336 l -366.336 366.336 v 60.331 h 60.331 l 366.336 -366.336 l 366.336 366.336 h 60.331 v -60.331 l -366.315 -366.336 l 366.315 -366.336 v -60.331 Z");
@@ -1467,9 +1492,7 @@ button {
     align-items: center;
     right: 0;
 }
-.leftPath {
-    fill: rgba(0,47,52,.64);
-}
+
 
 path[Attributes=Style] {
    path :d("M 684.685 85.333 l -407.352 396.501 v 60.331 l 407.352 396.501 h 61.982 v -60.331 l -376.339 -366.336 l 376.339 -366.336 v -60.331 Z");
@@ -1720,7 +1743,6 @@ body {
     /* display: flex;
     width: 900px;
     left: 318px; */
-    border: 2px lightgray solid;
     border-radius: 3px;
     padding: 16px;
 }
@@ -1812,6 +1834,8 @@ body {
     display: flex;
     align-items: center;
     top: 0;
+    left: 824px;
+    background: linear-gradient(90deg,hsla(0,0%,100%,0),rgba(0,0,0,.2));
 }
 ._1Bqyd ._3whvs {
     display: none;
